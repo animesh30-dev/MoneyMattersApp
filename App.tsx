@@ -87,7 +87,6 @@ function AuthenticatedApp() {
                   backgroundColor: '#94cce8',
                 },
                 headerTitleStyle: {
-                  fontWeight: 'bold',
                   color:'#2b2d6e'
                 },
               }}
