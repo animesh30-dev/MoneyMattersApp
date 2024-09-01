@@ -19,7 +19,8 @@ export default function AddTransaction({
 }: {
   insertTransaction(transaction: Transaction): Promise<void>;
 }) {
-  const [isAddingTransaction, setIsAddingTransaction] =React.useState<boolean>(false);
+  const [isAddingTransaction, setIsAddingTransaction] =
+    React.useState<boolean>(false);
   const [currentTab, setCurrentTab] = React.useState<number>(0);
   const [categories, setCategories] = React.useState<Category[]>([]);
   const [typeSelected, setTypeSelected] = React.useState<string>("");
@@ -86,10 +87,20 @@ export default function AddTransaction({
             />
             <TextInput
               placeholder="Description"
-              style={{ marginBottom: 15 , fontWeight:'300' }}
+              style={{ marginBottom: 15, fontWeight: "300" }}
               onChangeText={setDescription}
             />
-            <Text style={{ marginBottom: 6,marginTop:2,textAlign:'center' ,fontWeight:'600' ,fontSize:16 }}>Select a entry type</Text>
+            <Text
+              style={{
+                marginBottom: 6,
+                marginTop: 2,
+                textAlign: "center",
+                fontWeight: "600",
+                fontSize: 16,
+              }}
+            >
+              Select a entry type
+            </Text>
             <SegmentedControl
               values={["Expense", "Income"]}
               style={{ marginBottom: 15 }}
@@ -111,33 +122,39 @@ export default function AddTransaction({
             ))}
           </Card>
           <View
-            style={{ flexDirection: "row", justifyContent: "space-around" ,marginTop:16}}
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop: 16,
+            }}
           >
+            <View>
+              <Pressable
+                style={({ pressed }) =>
+                  pressed
+                    ? [styles.buttonInnerContainer, styles.pressed]
+                    : styles.buttonInnerContainer
+                }
+                onPress={() => setIsAddingTransaction(false)}
+                android_ripple={{ color: "#527BAB" }}
+              >
+                <Text style={styles.buttonText}>CANCEL</Text>
+              </Pressable>
+            </View>
 
-
-            <Pressable
-              style={({ pressed }) =>
-                pressed
-                  ? [styles.buttonInnerContainer, styles.pressed]
-                  : styles.buttonInnerContainer
-              }
-              onPress={() => setIsAddingTransaction(false)}
-              android_ripple={{ color: "#527BAB" }}
-            >
-              <Text style={styles.buttonText}>CANCEL</Text>
-            </Pressable>
-
-            <Pressable
-              style={({ pressed }) =>
-                pressed
-                  ? [styles.buttonInnerContainer, styles.pressed]
-                  : styles.buttonInnerContainer
-              }
-              onPress={handleSave}
-              android_ripple={{ color: "#527BAB" }}
-            >
-              <Text style={styles.buttonText}>SAVE</Text>
-            </Pressable>
+            <View>
+              <Pressable
+                style={({ pressed }) =>
+                  pressed
+                    ? [styles.buttonInnerContainer, styles.pressed]
+                    : styles.buttonInnerContainer
+                }
+                onPress={handleSave}
+                android_ripple={{ color: "#527BAB" }}
+              >
+                <Text style={styles.buttonText}>SAVE</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       ) : (
@@ -218,12 +235,16 @@ function AddButton({
 }
 
 const styles = StyleSheet.create({
+  buttonOuterContainer: {
+    borderRadius: 28,
+    overflow: "hidden",
+  },
   buttonInnerContainer: {
     backgroundColor: "#0E2137",
     borderRadius: 28,
     paddingVertical: 8,
     paddingHorizontal: 16,
-    width:125,
+    width: 125,
     elevation: 2,
   },
   buttonText: {
