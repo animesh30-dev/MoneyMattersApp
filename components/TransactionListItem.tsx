@@ -1,9 +1,13 @@
 import { AntDesign } from "@expo/vector-icons";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import { Category, Transaction } from "../types";
 import { AutoSizeText, ResizeTextMode } from "react-native-auto-size-text";
 import { categoryColors, categoryEmojies } from "../constants";
 import Card from "./ui/Card";
+
+
+ 
+
 
 interface TransactionListItemProps {
   transaction: Transaction;
@@ -21,6 +25,25 @@ export default function TransactionListItem({
   const color = transaction.type === "Expense" ? "red" : "green";
   const categoryColor = categoryColors[categoryInfo?.name ?? "Default"];
   const emoji = categoryEmojies[categoryInfo?.name ?? "Default"];
+ 
+  function deleteHandler(){
+    Alert.alert(
+      'Delete Transaction',
+      'Do you want to delete this transaction entry?',
+      [
+        {
+          text: 'Cancel',
+        },
+        {
+          text:'Delete',
+          onPress: () => deleteTransaction(transaction.id),
+          style : 'cancel',
+        }
+      ],
+      
+    );
+  }
+
   return (
     <Card>
       <View style={styles.row}>
@@ -41,7 +64,8 @@ export default function TransactionListItem({
           description={transaction.description}
           id={transaction.id}
         />
-        <Pressable  onLongPress={() => deleteTransaction(transaction.id)}>
+        {/* () => deleteTransaction(transaction.id) */}
+        <Pressable  onPress={deleteHandler}>
           <AntDesign name="delete" size={24} color="black" />
         </Pressable>
       </View>
@@ -62,7 +86,7 @@ function TransactionInfo({
   return (
     <View style={{ flexGrow: 1, gap: 6, flexShrink: 1 }}>
       <Text style={{ fontSize: 16, fontWeight: "bold" }}>{description}</Text>
-      <Text>Transaction number {id}</Text>
+      {/* <Text>Transaction number {id}</Text> */}
       <Text style={{ fontSize: 12, color: "gray" }}>
         {new Date(date * 1000).toDateString()}
       </Text>

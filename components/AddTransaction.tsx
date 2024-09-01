@@ -86,7 +86,7 @@ export default function AddTransaction({
             />
             <TextInput
               placeholder="Description"
-              style={{ marginBottom: 15 , fontWeight:'300' }}
+              style={{ marginBottom: 15 , fontWeight:'300',fontSize:16 }}
               onChangeText={setDescription}
             />
             <Text style={{ marginBottom: 6,marginTop:2,textAlign:'center' ,fontWeight:'600' ,fontSize:16 }}>Select a entry type</Text>
@@ -101,7 +101,6 @@ export default function AddTransaction({
             {categories.map((cat) => (
               <CategoryButton
                 key={cat.name}
-                // @ts-ignore
                 id={cat.id}
                 title={cat.name}
                 isSelected={typeSelected === cat.name}
@@ -115,7 +114,9 @@ export default function AddTransaction({
           >
 
 
-            <Pressable
+          
+       <View style={styles.buttonOuterContainer}>    
+        <Pressable
               style={({ pressed }) =>
                 pressed
                   ? [styles.buttonInnerContainer, styles.pressed]
@@ -126,18 +127,36 @@ export default function AddTransaction({
             >
               <Text style={styles.buttonText}>CANCEL</Text>
             </Pressable>
+            </View>
+          
+            
+            {/* <TouchableOpacity onPress={()=>setIsAddingTransaction(false)}
+            activeOpacity={0.6}
+            
+             style={{
+              backgroundColor: "#0E2137",
+              borderRadius: 28,
+              paddingVertical: 8,
+              paddingHorizontal: 16,
+              width:125,
+              elevation: 2,
+            }}>
+            <Text style={styles.buttonText}>CANCEL</Text>
+            </TouchableOpacity> */}
 
-            <Pressable
+          <View style={styles.buttonOuterContainer}>
+          <Pressable
               style={({ pressed }) =>
                 pressed
                   ? [styles.buttonInnerContainer, styles.pressed]
                   : styles.buttonInnerContainer
               }
               onPress={handleSave}
-              android_ripple={{ color: "#527BAB" }}
+              android_ripple={{ color: "#527BAB" ,radius:28}}
             >
               <Text style={styles.buttonText}>SAVE</Text>
             </Pressable>
+          </View>
           </View>
         </View>
       ) : (
@@ -203,7 +222,6 @@ function AddButton({
         height: 40,
         flexDirection: "row",
         alignItems: "center",
-
         justifyContent: "center",
         backgroundColor: "#007BFF20",
         borderRadius: 15,
@@ -218,18 +236,24 @@ function AddButton({
 }
 
 const styles = StyleSheet.create({
+  buttonOuterContainer: {
+    borderRadius: 28,
+    margin: 4,
+    overflow: "hidden",
+
+  },
+
   buttonInnerContainer: {
     backgroundColor: "#0E2137",
-    borderRadius: 28,
+    borderRadius:28,
     paddingVertical: 8,
     paddingHorizontal: 16,
-    width:125,
     elevation: 2,
   },
   buttonText: {
     color: "white",
     textAlign: "center",
-    fontSize: 18,
+    fontSize:18,
   },
   pressed: {
     opacity: 0.75,
