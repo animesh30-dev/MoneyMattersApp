@@ -10,11 +10,11 @@ This readme file contains all the details about the tech stack and how to set it
 
 ## Features
 
-• Developed a cross-platform mobile budgeting application using React Native and TypeScript
-• Leveraged SQLite for efficient local storage of transaction data, offering offline functionality
-• Implementing User-Login using Firebase and Axios for onboarding new users
-• Implemented CRUD (Create, Read, Update, Delete) for transactions (income, expenses) using SQLite
-• Utilized React Navigation for intuitive in-app navigation, providing users with a smooth and organized UX
+• Developed a cross-platform mobile budgeting application using React Native and TypeScript </br>
+• Leveraged SQLite for efficient local storage of transaction data, offering offline functionality </br>
+• Implementing User-Login using Firebase and Axios for onboarding new users </br>
+• Implemented CRUD (Create, Read, Update, Delete) for transactions (income, expenses) using SQLite </br>
+• Utilized React Navigation for intuitive in-app navigation, providing users with a smooth and organized UX </br>
 
 ## Installation
 ```
