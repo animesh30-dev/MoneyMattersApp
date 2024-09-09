@@ -6,7 +6,8 @@
 Welcome to MoneyMatterApp! This project aims to solve the problem of budget tracking. It organizes your income and expenses into different categories and provides data on your monthly cash flow.
 This readme file contains all the details about the tech stack and how to set it up.
 
-## Tech Stack: Typescript, React Native, Expo, SQLite, Firebase, Axios
+## Tech Stack:
+Typescript, React Native, Expo, SQLite, Firebase, Axios
 
 ## Features
 
@@ -16,6 +17,8 @@ This readme file contains all the details about the tech stack and how to set it
 • Implemented CRUD (Create, Read, Update, Delete) for transactions (income, expenses) using SQLite </br>
 • Utilized React Navigation for intuitive in-app navigation, providing users with a smooth and organized UX </br>
 
+## Demo 
+Here's the video demo of the app <a href="https://youtube.com/shorts/6TkBThvkNY8?feature=share"><img alt="YouTube"  src="https://github.com/animesh30-dev/GuessGame/assets/146109979/31fde5c3-efad-4d24-b237-f60ad1ecac11" width="90" height="42"/></a>
 ## Installation
 ```
 npm install expo
