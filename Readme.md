@@ -18,7 +18,7 @@ Typescript, React Native, Expo, SQLite, Firebase, Axios
 • Utilized React Navigation for intuitive in-app navigation, providing users with a smooth and organized UX </br>
 
 ## Demo 
-Here's the video demo of the app <a href="https://youtube.com/shorts/6TkBThvkNY8?feature=share"><img alt="YouTube"  src="https://github.com/animesh30-dev/GuessGame/assets/146109979/31fde5c3-efad-4d24-b237-f60ad1ecac11" width="90" height="42"/></a>
+Here's the video demo of the app <a href="https://youtube.com/shorts/6TkBThvkNY8?feature=share">
 ## Installation
 ```
 npm install expo
