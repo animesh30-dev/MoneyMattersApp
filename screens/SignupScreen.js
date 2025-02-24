@@ -4,7 +4,8 @@ import { createUser } from '../util/auth';
 import LoadingOverlay from '../components/ui/LoadingOverlay';
 
 export function SignupScreen() {
-  const [isAuthenticating , setIsAuthenticating] = useState();
+  const [isAuthenticating , setIsAuthenticating] = useState(false);
+  
   async function signupHandler({email,password}){
     
     setIsAuthenticating(true);

@@ -180,5 +180,5 @@ const styles = StyleSheet.create({
       color: "#333",
       marginBottom: 10,
     },
-    // Removed moneyText style since we're now generating it dynamically
+   
   });

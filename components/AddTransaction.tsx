@@ -45,13 +45,13 @@ export default function AddTransaction({
   }
 
   async function handleSave() {
-    console.log({
-      amount: Number(amount),
-      description,
-      category_id: categoryId,
-      date: new Date().getTime() / 1000,
-      type: category as "Expense" | "Income",
-    });
+    // console.log({
+    //   amount: Number(amount),
+    //   description,
+    //   category_id: categoryId,
+    //   date: new Date().getTime() / 1000,
+    //   type: category as "Expense" | "Income",
+    // });
 
     await insertTransaction({
       amount: Number(amount),
