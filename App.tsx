@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SQLiteProvider } from "expo-sqlite/next";
+import { SQLiteProvider } from "expo-sqlite";
 import { ActivityIndicator, Platform, Text, View } from "react-native";
 import * as FileSystem from "expo-file-system";
 import { Asset } from "expo-asset";
@@ -29,14 +29,14 @@ const loadDatabase = async () => {
   }
 };
 
-function AuthUser(){
+function AuthUser() {
   return (
     <Stack.Navigator
-    screenOptions={{
-      headerStyle: { backgroundColor: Colors.primary500 },
-      headerTintColor: 'white',
-      contentStyle: { backgroundColor: Colors.primary100 },
-    }}
+      screenOptions={{
+        headerStyle: { backgroundColor: Colors.primary500 },
+        headerTintColor: "white",
+        contentStyle: { backgroundColor: Colors.primary100 },
+      }}
     >
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
@@ -60,59 +60,56 @@ function AuthenticatedApp() {
         <Text>Loading Database...</Text>
       </View>
     );
-    
+
   return (
-   
-      <React.Suspense
-        fallback={
-          <View style={{ flex: 1 }}>
-            <ActivityIndicator size={"large"} />
-            <Text>Loading Database...</Text>
-          </View>
-        }
-      >
-        <SQLiteProvider databaseName="mySQLiteDB.db" useSuspense>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Home"
-              component={Home}
-              options={{
-                headerTitleAlign:"center",
-                headerTitle: "Money Matters",
-                headerShadowVisible:true,
-                headerLargeTitle: true,
-                headerTransparent: Platform.OS === "ios" ? true : false,
-                // headerBlurEffect: "light",
-                headerStyle:{
-                  backgroundColor: '#94cce8',
-                },
-                headerTitleStyle: {
-                  color:'#2b2d6e'
-                },
-              }}
-            />
-          </Stack.Navigator>
-        </SQLiteProvider>
-      </React.Suspense>
-   
+    <React.Suspense
+      fallback={
+        <View style={{ flex: 1 }}>
+          <ActivityIndicator size={"large"} />
+          <Text>Loading Database...</Text>
+        </View>
+      }
+    >
+      <SQLiteProvider databaseName="mySQLiteDB.db" useSuspense>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerTitleAlign: "center",
+              headerTitle: "Money Matters",
+              headerShadowVisible: true,
+              headerLargeTitle: true,
+              headerTransparent: Platform.OS === "ios" ? true : false,
+              // headerBlurEffect: "light",
+              headerStyle: {
+                backgroundColor: "#94cce8",
+              },
+              headerTitleStyle: {
+                color: "#2b2d6e",
+              },
+            }}
+          />
+        </Stack.Navigator>
+      </SQLiteProvider>
+    </React.Suspense>
   );
 }
 
-
-function Navigation(){
+function Navigation() {
   return (
     <NavigationContainer>
       {/* <AuthUser/> */}
-      <AuthenticatedApp/>
-  </NavigationContainer>
+      <AuthenticatedApp />
+    </NavigationContainer>
   );
 }
 
-export default function App(){
+export default function App() {
   return (
     <>
-    <StatusBar style="dark"/>
-    <Navigation/>
+      <StatusBar style="dark" />
+      <Navigation />
     </>
-  )
+  );
 }
