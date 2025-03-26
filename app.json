@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "newArchEnabled" : "true",
+    "newArchEnabled": "true",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -34,8 +34,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "7150ffaa-5375-4f5b-a85b-c08afffe1e60"
+        "projectId": "35696ebc-9b05-416a-84d0-fc428052a7f8"
       }
-    }
+    },
+    "owner": "animesh30-dev"
   }
 }
