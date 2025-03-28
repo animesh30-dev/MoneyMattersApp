@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "BudgetBuddy",
-    "slug": "BudgetBuddy",
+    "name": "MoneyMatters",
+    "slug": "MoneyMatters",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,14 +17,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.betomoedano.BudgetBuddy"
+      "bundleIdentifier": "com.animesh30-dev.MoneyMatters"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.betomoedano.BudgetBuddy"
+      "package": "com.animesh30-dev.MoneyMatters"
     },
     "web": {
       "favicon": "./assets/favicon.png"
