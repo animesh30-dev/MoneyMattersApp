@@ -1,5 +1,5 @@
 ## MoneyMattersApp
-<p align="center"> <img src="https://github.com/user-attachments/assets/730ae127-d170-4734-81c9-0acb859cab69" width="200"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/730ae127-d170-4734-81c9-0acb859cab69" width="700"> </p>
 Welcome to MoneyMatterApp! This project aims to solve the problem of budget tracking. It organizes your income and expenses into different categories and provides data on your monthly cash flow.
 This readme file contains all the details about the tech stack and how to set it up.
 
