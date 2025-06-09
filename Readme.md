@@ -1,5 +1,5 @@
 ## MoneyMattersApp
-
+<p align="center"> <img src="https://github.com/user-attachments/assets/730ae127-d170-4734-81c9-0acb859cab69" width="200"> </p>
 Welcome to MoneyMatterApp! This project aims to solve the problem of budget tracking. It organizes your income and expenses into different categories and provides data on your monthly cash flow.
 This readme file contains all the details about the tech stack and how to set it up.
 
@@ -15,7 +15,7 @@ Typescript, React Native, Expo, SQLite
 
 # Application:
 There are some demo transactions, please delete them once and the app is all yours.
-Here's the download link of the apk: <a href="https://expo.dev/artifacts/eas/958WHz69YDNZtxHpgfPE9m.apk">Click Here
+Here's the download link of the apk: <a href="https://drive.google.com/file/d/1jHf5u_dDCHSfBxIr0nefqbkXQRAe4LeF/view?usp=sharing">Click Here
 ## Demo 
 Here's the video demo of the app <a href="https://youtube.com/shorts/6TkBThvkNY8?feature=share">Click Here
 ## Installation
